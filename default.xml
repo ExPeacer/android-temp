@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote fetch="https://android.googlesource.com" name="aosp"/>
-  <remote fetch=".." name="github" review="review.cyanogenmod.com"/>
-  <remote fetch="https://git@bitbucket.org/paranoidandroid/" name="paranoid"/>
-  <remote fetch="ssh://git@github.com" name="private"/>
-  
-  <default remote="github" revision="refs/heads/jellybean" sync-j="4"/>
-  <project groups="default" name="CyanogenMod/android_hardware_qcom_display" path="hardware/qcom/display" revision="0d47bc4df5de25b8232a3c297a96d8def5e206af"/>
+
+  <remote  name="aosp"
+           fetch=".." />
+  <default revision="refs/tags/android-4.1.2_r1"
+           remote="aosp"
+           sync-j="4" />
+
+  <project path="prebuilt" name="platform/prebuilt" />
+  <project path="prebuilts/gcc/linux-x86/x86/i686-android-linux-4.4.3" name="platform/prebuilts/gcc/linux-x86/x86/i686-android-linux-4.4.3" />
+  <project path="prebuilts/gcc/linux-x86/x86/i686-linux-android-4.6" name="platform/prebuilts/gcc/linux-x86/x86/i686-linux-android-4.6" />
 </manifest>
